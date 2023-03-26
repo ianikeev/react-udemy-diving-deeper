@@ -34,6 +34,10 @@ const AddUser = (props) => {
     }
     props.onAddUser(enteredName, enteredUserAge);
 
+    // Usually direct DOM manipulation is discouraged, but in this case we are
+    // not doing much.
+    nameInputRef.current.value = '';
+    ageInputRef.current.value = '';
   };
 
   const errorHandler = () => {
